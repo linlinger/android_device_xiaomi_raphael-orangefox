@@ -76,8 +76,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     # -- end R11 settings --
 
     # Maintainer Stuff
-    export OF_MAINTAINER="linlinger"
-    export FOX_VERSION="R12.1_0-DSP-nonDSP-Unified"
+    export OF_MAINTAINER="天拖保全丁文元"
+    export FOX_VERSION="R12.1_0-alpha-DSP-nonDSP-Unified"
 
     # run a process after formatting data to recreate /data/media/0
     export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1

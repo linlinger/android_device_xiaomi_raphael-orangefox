@@ -25,7 +25,7 @@ else
     # Fix MTG Installation
     ln -s /dev/block/bootdevice/by-name /dev/block/mapper
     echo >> /system/etc/twrp.flags
-    cat /fstab/twrp.flags.nondynpart >> /system/etc/twrp.flags
+    cat /system/etc/twrp.flags.nondynpart >> /system/etc/twrp.flags
     echo "/super emmc /dev/block/by-name/system flags=display=\"Super\"" >> /system/etc/twrp.flags
     if [ "$FBE" = "2" ]; then
         cat /system/etc/recovery.fstab.fbev2 >> /system/etc/recovery.fstab

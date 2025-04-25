@@ -77,7 +77,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
     # Maintainer Stuff
     export OF_MAINTAINER="天拖保全丁文元"
-    export FOX_VERSION="R12.1_0-alpha-DSP-nonDSP-Unified"
+    export FOX_MAINTAINER_PATCH_VERSION="DSP-nonDSP-Unified-alpha"
 
     # run a process after formatting data to recreate /data/media/0
     export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
@@ -98,7 +98,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	# Use OrangeFox app manager
 	export FOX_ENABLE_APP_MANAGER=1
-	
+
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE

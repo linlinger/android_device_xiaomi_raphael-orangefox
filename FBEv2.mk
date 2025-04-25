@@ -44,6 +44,6 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/FBEv2/Image.gz-dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/FBEv2/dtbo.img
 
-# Fstab and flags
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab/recovery-fbev2.fstab
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab/twrp-fbev2.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags
+# # Fstab and flags
+# TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab/recovery-fbev2.fstab
+# PRODUCT_COPY_FILES += $(DEVICE_PATH)/fstab/twrp-fbev2.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags

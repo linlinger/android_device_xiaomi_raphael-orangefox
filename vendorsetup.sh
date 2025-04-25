@@ -39,6 +39,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_LEFT="48"
 	export OF_STATUS_INDENT_RIGHT="48"
 	export OF_SCREEN_H=2340
+	export OF_ALLOW_DISABLE_NAVBAR=0
 	export TARGET_DEVICE_ALT="raphaelin"
 	export OF_PATCH_AVB20=1
    	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
@@ -75,19 +76,22 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     # -- end R11 settings --
 
     # Maintainer Stuff
-    export OF_MAINTAINER="NATO66613"
-    export FOX_VERSION="R12.1_0-DSP-FBeV2-F2FSCompression"
+    export OF_MAINTAINER="linlinger"
+    export FOX_VERSION="R12.1_0-DSP-nonDSP-Unified"
 
     # run a process after formatting data to recreate /data/media/0
     export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
 
     # ensure that /sdcard is bind-unmounted before f2fs data repair or format
     export OF_UNBIND_SDCARD_F2FS=1
-
-	# necessary to decrypt FBEv1 ROMs
-        if [ "$FOX_VARIANT" = "FBEv1" ]; then
-		export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
-        fi
+		
+	export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
+	
+	# Add Magisk installer to recovery ramdisk
+	export FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK=1
+	
+	# Not to erase settings after flashing  ofox recovery zip 
+	export FOX_RESET_SETTINGS=disabled
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then

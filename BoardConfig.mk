@@ -128,13 +128,18 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 120
 
+# display
+TW_FRAMERATE := 60
+
 # drift/offset
 TW_QCOM_ATS_OFFSET := 1617714502203
 
 # SEPolicy
 -include device/xiaomi/raphael/sepolicy/recovery-sepolicy.mk
 SELINUX_IGNORE_NEVERALLOWS := true
-#
+
+# Default language settings
+TW_DEFAULT_LANGUAGE := zh_CN
 
 # TWRP Debug Flags
 TWRP_INCLUDE_LOGCAT:= true

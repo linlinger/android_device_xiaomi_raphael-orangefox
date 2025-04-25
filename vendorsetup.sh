@@ -93,6 +93,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# Not to erase settings after flashing  ofox recovery zip 
 	export FOX_RESET_SETTINGS=disabled
 
+	# Set defalut TZ to Beijing
+	export OF_DEFAULT_TIMEZONE="TAIST-8;TAIDT"
+
+	# Use OrangeFox app manager
+	export FOX_ENABLE_APP_MANAGER=1
+	
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
